@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepayment Risk Predictor By Banuprakash</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prepayment Risk Predictor</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="credit_score">Credit Score <i class="fas fa-info-circle" title="Credit score is a number based on an individual's credit files that represents the creditworthiness of an individual."></i>:</label>
+                <input type="text" id="credit_score" name="credit_score" required><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="dti">DTI Percentage <i class="fas fa-info-circle" title="Debt-to-Income Ratio (DTI) is a personal finance measure that compares an individual's monthly debt payment to their monthly gross income."></i>:</label>
+                <input type="text" id="dti" name="dti" required><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="months_in_repayment">Months in Repayment <i class="fas fa-info-circle" title="Number of months the mortgage has been in repayment."></i>:</label>
+                <input type="text" id="months_in_repayment" name="months_in_repayment" required><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="channel">Channel <i class="fas fa-info-circle" title="The distribution channel through which the mortgage loan was originated."></i>:</label>
+                <select id="channel" name="channel" required>
+                    <option value="third party organisation">Third Party Organisation</option>
+                    <option value="retail">Retail</option>
+                    <option value="correspondent">Correspondent</option>
+                    <option value="broker">Broker</option>
+                </select><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="occupancy">Occupancy <i class="fas fa-info-circle" title="The intended use of the property by the borrower."></i>:</label>
+                <select id="occupancy" name="occupancy" required>
+                    <option value="owner occupied">Owner Occupied</option>
+                    <option value="investment">Investment</option>
+                    <option value="second home">Second Home</option>
+                </select><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="property_type">Property Type <i class="fas fa-info-circle" title="Type of property securing the mortgage loan."></i>:</label>
+                <select id="property_type" name="property_type" required>
+                    <option value="single family">Single Family</option>
+                    <option value="planned unit development">Planned Unit Development</option>
+                    <option value="condominium">Condominium</option>
+                    <option value="manufactured home">Manufactured Home</option>
+                    <option value="leasehold">Leasehold</option>
+                    <option value="cooperative">Cooperative</option>
+                </select><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="original_interest_rate">Original Interest Rate <i class="fas fa-info-circle" title="The initial interest rate of the mortgage loan."></i>:</label>
+                <input type="text" id="original_interest_rate" name="original_interest_rate" required><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="original_loan_term">Original Loan Term (Months) <i class="fas fa-info-circle" title="The original term length of the mortgage loan in months."></i>:</label>
+                <input type="text" id="original_loan_term" name="original_loan_term" required><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="units">Number of Units <i class="fas fa-info-circle" title="The number of units in the property securing the mortgage loan."></i>:</label>
+                <input type="text" id="units" name="units" required><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="number_of_borrowers">Number of Borrowers <i class="fas fa-info-circle" title="The number of borrowers applying for the mortgage loan."></i>:</label>
+                <input type="text" id="number_of_borrowers" name="number_of_borrowers" required><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="mip">Mortgage Insurance Percent <i class="fas fa-info-circle" title="The percentage of the mortgage amount that is paid as mortgage insurance."></i>:</label>
+                <input type="text" id="mip" name="mip" required><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="original_upb">Original Unpaid Principal Balance <i class="fas fa-info-circle" title="The amount of principal left to be paid on a loan."></i>:</label>
+                <input type="text" id="original_upb" name="original_upb" required><br><br>
+            </div>
+            
+            <div class="form-group">
+                <label for="ocltv">Origination Combined Loan-to-Value Ratio <i class="fas fa-info-circle" title="The combined loan-to-value ratio measures the total of all loans secured by a property compared to the property's appraised value."></i>:</label>
+                <input type="text" id="ocltv" name="ocltv" required><br><br>
+            </div>
+            
+            <input type="submit" value="PREDICT">
+        </form>
+        <style>
+            p {
+                font-family: Arial, sans-serif; 
+                font-size: 13px; 
+                font-weight: italic;
+                color: #d1d0cf; 
+            }
+        </style>
+        
+        <p>*Project Developed By Banuprakash Vellingiri</p>
+    </div>
+</body>
+</html>

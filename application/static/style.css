@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://a.storyblok.com/f/67269/1000x665/fef679b0eb/securedvsunsecuredloans_shutterstock_1606552657.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.container {
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #f1fbff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"], input[type="submit"], select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select {
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    background-color: #01a6ff;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #005a8b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.fa-info-circle {
+    color: #c5eeff;
+    margin-left: 5px;
+    font-size: 1.0em;
+    cursor: pointer;
+}
+
+.fa-info-circle:hover {
+    color: #01b3ca;
+}
